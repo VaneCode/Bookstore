@@ -19,9 +19,4 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
 };
 
-Book.defaultProps = {
-  title: 'unkwon',
-  author: 'unkwon',
-};
-
 export default Book;
