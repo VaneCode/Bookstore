@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
 
@@ -14,7 +13,7 @@ const BookList = (props) => {
 };
 
 BookList.propTypes = {
-  books: PropTypes.string,
+  books: PropTypes.arrayOf(PropTypes.objectOf),
 };
 
 BookList.defaultProps = {

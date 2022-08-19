@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AddBookFrm = () => (
   <div>
     <h2>ADD NEW BOOK</h2>

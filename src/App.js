@@ -1,29 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
+import Navbar from './components/Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const booksData = [
+  {
+    id: uuidv4(),
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: uuidv4(),
+    title: 'Dune',
+    author: 'Frank Herbert',
+  },
+  {
+    id: uuidv4(),
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
+
+const App = () => (
+  <div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Books booksList={booksData} />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </Router>
+  </div>
+);
 
 export default App;
