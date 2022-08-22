@@ -19,7 +19,7 @@ const initialState = {
 };
 
 // Reducer
-const reducer = (action) => {
+const reducerBooks = (action) => {
   let { books } = initialState;
   switch (action.type) {
     case ADDED_BOOK:
@@ -33,4 +33,4 @@ const reducer = (action) => {
   }
 };
 
-export default reducer;
+export default reducerBooks;

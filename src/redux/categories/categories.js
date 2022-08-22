@@ -12,7 +12,7 @@ const initialState = {
 };
 
 // Reducer
-const reducer = (action) => {
+const reducerCategories = (action) => {
   switch (action.type) {
     case CHECKED_STATUS:
       return 'Under construction';
@@ -21,4 +21,4 @@ const reducer = (action) => {
   }
 };
 
-export default reducer;
+export default reducerCategories;
