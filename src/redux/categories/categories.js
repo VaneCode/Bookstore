@@ -1,5 +1,5 @@
 // Action types
-const CHECKED_STATUS = 'redux/categories/CHECKED_STATUS';
+const CHECKED_STATUS = 'bookstore/categories/CHECKED_STATUS';
 
 // Create and export action creators
 export const CheckedStatus = () => ({
@@ -12,12 +12,12 @@ const initialState = {
 };
 
 // Reducer
-const reducerCategories = (action) => {
+const reducerCategories = (state = initialState, action) => {
   switch (action.type) {
     case CHECKED_STATUS:
       return 'Under construction';
     default:
-      return initialState;
+      return state;
   }
 };
 
