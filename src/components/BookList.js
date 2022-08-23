@@ -1,23 +1,16 @@
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux/es/exports';
 import Book from './Book';
 
-const BookList = (props) => {
-  const { books } = props;
+const BookList = () => {
+  // Get the list of books from the state
+  const booksList = useSelector((state) => state.books.value);
   return (
     <div>
-      {books.map((data) => (
+      {booksList.map((data) => (
         <Book key={data.id} title={data.title} author={data.author} />
       ))}
     </div>
   );
-};
-
-BookList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.objectOf),
-};
-
-BookList.defaultProps = {
-  books: null,
 };
 
 export default BookList;
