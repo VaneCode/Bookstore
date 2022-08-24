@@ -7,12 +7,10 @@ export const CheckedStatus = () => ({
 });
 
 // Initialize the state
-const initialState = {
-  categories: [],
-};
+const categories = [];
 
 // Reducer
-const reducerCategories = (state = initialState, action) => {
+const reducerCategories = (state = categories, action) => {
   switch (action.type) {
     case CHECKED_STATUS:
       return 'Under construction';

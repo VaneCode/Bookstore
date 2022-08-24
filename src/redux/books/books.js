@@ -38,19 +38,11 @@ const value = [
 // Reducer
 const reducerBooks = (state = value, action) => {
   const { payload } = action;
-  let index = 0;
   switch (action.type) {
     case ADDED_BOOK:
       return [...state, payload];
     case REMOVED_BOOK:
-      console.log(`remove payload${payload}`);
-      index = state.findIndex((book) => book.id === payload);
-      console.log(`index${index}`);
-      return [
-        ...state.filter((book) => book.id !== payload),
-        // ...state.slice(0, index),
-        // ...state.slice(index + 1),
-      ];
+      return [...state.filter((book) => book.id !== payload)];
     default:
       return state;
   }
