@@ -1,5 +1,6 @@
 // Import
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
+import { v4 as uuidv4 } from 'uuid';
 import { AddBook } from '../redux/books/books';
 
 const AddBookFrm = () => {
@@ -8,7 +9,8 @@ const AddBookFrm = () => {
     e.preventDefault();
     const title = e.target.elements.title.value;
     const author = e.target.elements.author.value;
-    dispatch(AddBook(title, author));
+    const book = { id: uuidv4(), title, author };
+    dispatch(AddBook(book));
   };
   return (
     <div>
