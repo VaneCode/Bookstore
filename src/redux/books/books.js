@@ -18,7 +18,23 @@ export const RemoveBook = (id) => ({
 
 // Initialize the state
 const initialState = {
-  value: [],
+  value: [
+    {
+      id: uuidv4(),
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
+    },
+    {
+      id: uuidv4(),
+      title: 'Dune',
+      author: 'Frank Herbert',
+    },
+    {
+      id: uuidv4(),
+      title: 'Capital in the Twenty-First Century',
+      author: 'Suzanne Collins',
+    },
+  ],
 };
 
 // Reducer
