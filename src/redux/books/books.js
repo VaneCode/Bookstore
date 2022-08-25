@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 // Import
-// import { v4 as uuidv4 } from 'uuid';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import url from '../../api/ApiUrl';
@@ -69,4 +68,4 @@ const reducerBooks = createSlice({
   },
 });
 
-export default reducerBooks;
+export default reducerBooks.reducer;

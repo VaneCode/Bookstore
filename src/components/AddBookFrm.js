@@ -1,32 +1,27 @@
 // Import
+import { useState } from 'react';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { v4 as uuidv4 } from 'uuid';
 import { AddBook } from '../redux/books/books';
 
 const AddBookFrm = () => {
+  // Hooks
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
-  // Array of categories
-  const categories = [
-    { id: uuidv4(), name: 'Category' },
-    { id: uuidv4(), name: 'Fiction' },
-    { id: uuidv4(), name: 'Tales' },
-    { id: uuidv4(), name: 'Poetry' },
-    { id: uuidv4(), name: 'Mithology' },
-    { id: uuidv4(), name: 'Science' },
-    { id: uuidv4(), name: 'Technology' },
-    { id: uuidv4(), name: 'Narrative NonFicion' },
-    { id: uuidv4(), name: 'Biography/Autobiography' },
-  ];
   // Handler submit form
   const AddBookHandler = (e) => {
     e.preventDefault();
-    const title = e.target.elements.title.value;
-    const author = e.target.elements.author.value;
-    const category = e.target.elements.category.value;
     const book = {
-      id: uuidv4(), title, author, category,
+      item_id: uuidv4(),
+      title,
+      author,
+      category,
     };
     dispatch(AddBook(book));
+    setTitle('');
+    setAuthor('');
   };
   return (
     <div>
@@ -34,26 +29,27 @@ const AddBookFrm = () => {
       <form onSubmit={AddBookHandler}>
         <input
           type="text"
-          name="title"
           placeholder="Book title"
-          onChange={() => {}}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
-          name="author"
           placeholder="Author"
-          onChange={() => {}}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <select
-          name="category"
-          defaultValue={categories[0].name}
-          onChange={() => {}}
+          defaultValue={category}
+          onChange={(e) => setCategory(e.target.value)}
         >
-          {categories.map((item) => (
-            <option value={item.name} key={item.id}>
-              {item.name}
-            </option>
-          ))}
+          <option value="" disabled>Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Tales">Tales</option>
+          <option value="Poetry">Poetry</option>
+          <option value="Mithology">Mithology</option>
+          <option value="Science">Science</option>
+          <option value="Technology">Technology</option>
+          <option value="Narrative NonFiction">Narrative NonFicion</option>
+          <option value="Biography/Autobiography">Biography/Autobiography</option>
         </select>
         <button type="submit">ADD BOOK</button>
       </form>
