@@ -12,14 +12,12 @@ const REMOVED_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Create and export action creators
 export const FetchedBooks = createAsyncThunk(FETCHED_BOOKS, async () => {
-  // try {
-  // const response = await axios.get(url);
-  // return response.data;
-  // } catch (error) {
-  // return error;
-  // }
-  const response = await axios.get(url).catch((error) => error);
-  return response.data;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
 });
 
 export const AddBook = (book) => ({
