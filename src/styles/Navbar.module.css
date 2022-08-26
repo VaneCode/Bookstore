@@ -1,3 +1,15 @@
+.NavBar {
+  width: 87.5rem;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: var(--white-color);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .BookstoreCMS {
     width: 15rem;
     height: 2.313rem;
@@ -12,3 +24,34 @@
     color: var(--azure);
     text-decoration: none;
   }
+
+.navigation{
+    list-style: none;   
+}
+
+.BurgerIcon {
+    background-color: transparent;
+    border: none;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.navItem{
+    width: 3.688rem;
+    height: 1rem;
+    margin: 1.125rem 2.563rem 0.688rem 0;
+    font-family: var(--main-font);
+    font-size: 0.813rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.9px;
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+
