@@ -11,6 +11,7 @@
 - SASS
 - React
 - Redux
+- Axios
 
 ## Live Demo (if avialable)
 

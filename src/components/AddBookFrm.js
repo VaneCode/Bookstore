@@ -20,8 +20,9 @@ const AddBookFrm = () => {
       category: selectCategory,
     };
     dispatch(AddBook(book));
-    setTitle('');
-    setAuthor('');
+    setTitle(' ');
+    setAuthor(' ');
+    e.target.reset();
   };
   return (
     <div>

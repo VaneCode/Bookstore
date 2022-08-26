@@ -13,12 +13,13 @@ const BookList = () => {
   }, []);
   return (
     <div>
-      {booksList.map((data) => (
+      {booksList.map((book) => (
         <Book
-          key={data.id}
-          id={data.id}
-          title={data.title}
-          author={data.author}
+          key={book.item_id}
+          id={book.item_id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
         />
       ))}
     </div>
