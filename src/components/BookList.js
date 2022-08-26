@@ -6,6 +6,7 @@ import Book from './Book';
 const BookList = () => {
   // Get the list of books from the state
   const booksList = useSelector((state) => state.books.books, shallowEqual);
+  console.log(booksList);
   // Dispatch the action to get the books from the API
   const dispatch = useDispatch();
   useEffect(() => {

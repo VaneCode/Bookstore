@@ -19,9 +19,19 @@ export const FetchedBooks = createAsyncThunk(FETCHED_BOOKS, async () => {
   }
 });
 
-export const AddBook = (book) => ({
-  type: ADDED_BOOK,
-  payload: book,
+// export const AddBook = (book) => ({
+// type: ADDED_BOOK,
+// payload: book,
+// });
+
+export const AddBook = createAsyncThunk(ADDED_BOOK, async (book) => {
+  try {
+    const response = await axios.post(url, book);
+    console.log(url);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
 });
 
 export const RemoveBook = (id) => ({
