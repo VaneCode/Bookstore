@@ -78,6 +78,9 @@ const reducerBooks = createSlice({
       })
       .addCase(AddBook.fulfilled, (state, action) => {
         state.books.push(action.payload);
+      })
+      .addCase(RemoveBook.fulfilled, (state, action) => {
+        state.filter((book) => book.id !== action.payload);
       });
   },
 });
