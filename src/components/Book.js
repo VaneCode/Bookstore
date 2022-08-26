@@ -4,7 +4,9 @@ import { RemoveBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
-  const { id, title, author } = props;
+  const {
+    id, title, author, category,
+  } = props;
   const RemoveHandler = () => {
     dispatch(RemoveBook(id));
   };
@@ -13,6 +15,7 @@ const Book = (props) => {
     <div>
       <h2>{title}</h2>
       <p>{author}</p>
+      <p>{category}</p>
       <button type="button">Comments</button>
       <button type="button" onClick={RemoveHandler}>Remove</button>
       <button type="button">Edit</button>
@@ -24,6 +27,7 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;

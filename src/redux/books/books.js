@@ -13,30 +13,31 @@ const REMOVED_BOOK = 'bookstore/books/REMOVE_BOOK';
 export const FetchedBooks = createAsyncThunk(FETCHED_BOOKS, async () => {
   try {
     const response = await axios.get(url);
-    return response.data;
+    const payload = Object.entries(response.data).map(([id, [book]]) => ({ item_id: id, ...book }));
+    return payload;
   } catch (error) {
     return error;
   }
 });
-
-// export const AddBook = (book) => ({
-// type: ADDED_BOOK,
-// payload: book,
-// });
 
 export const AddBook = createAsyncThunk(ADDED_BOOK, async (book) => {
   try {
-    const response = await axios.post(url, book);
-    console.log(url);
-    return response.data;
+    await axios.post(url, book);
+    const payload = book;
+    return payload;
   } catch (error) {
     return error;
   }
 });
 
-export const RemoveBook = (id) => ({
-  type: REMOVED_BOOK,
-  payload: id,
+export const RemoveBook = createAsyncThunk(REMOVED_BOOK, async (id) => {
+  try {
+    await axios.post(`${url}/:${id}`);
+    const payload = id;
+    return payload;
+  } catch (error) {
+    return error;
+  }
 });
 
 // Initialize the state
@@ -74,6 +75,9 @@ const reducerBooks = createSlice({
       .addCase(FetchedBooks.rejected, (state, action) => {
         state.status = 'Rejected';
         state.error = action.error.message;
+      })
+      .addCase(AddBook.fulfilled, (state, action) => {
+        state.books.push(action.payload);
       });
   },
 });

@@ -6,18 +6,18 @@ import { AddBook } from '../redux/books/books';
 
 const AddBookFrm = () => {
   // Hooks
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [inpTitle, setTitle] = useState('');
+  const [inpAuthor, setAuthor] = useState('');
+  const [selectCategory, setCategory] = useState('');
   const dispatch = useDispatch();
   // Handler submit form
   const AddBookHandler = (e) => {
     e.preventDefault();
     const book = {
       item_id: uuidv4(),
-      title,
-      author,
-      category,
+      title: inpTitle,
+      author: inpAuthor,
+      category: selectCategory,
     };
     dispatch(AddBook(book));
     setTitle('');
@@ -38,10 +38,12 @@ const AddBookFrm = () => {
           onChange={(e) => setAuthor(e.target.value)}
         />
         <select
-          defaultValue={category}
+          defaultValue={selectCategory}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="" disabled>Category</option>
+          <option value="" disabled>
+            Category
+          </option>
           <option value="Fiction">Fiction</option>
           <option value="Tales">Tales</option>
           <option value="Poetry">Poetry</option>
@@ -49,7 +51,9 @@ const AddBookFrm = () => {
           <option value="Science">Science</option>
           <option value="Technology">Technology</option>
           <option value="Narrative NonFiction">Narrative NonFicion</option>
-          <option value="Biography/Autobiography">Biography/Autobiography</option>
+          <option value="Biography/Autobiography">
+            Biography/Autobiography
+          </option>
         </select>
         <button type="submit">ADD BOOK</button>
       </form>
