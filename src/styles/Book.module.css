@@ -9,6 +9,7 @@
 
 .BookDetails {
   min-height: 40rem;
+  flex: 2;
 }
 
 .Category {
