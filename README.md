@@ -13,9 +13,9 @@
 - Redux
 - Axios
 
-## Live Demo (if avialable)
+## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://idyllic-starship-595a45.netlify.app/)
 
 ## Getting Started
 
