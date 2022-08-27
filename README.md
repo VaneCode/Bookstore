@@ -4,11 +4,11 @@
 
 # Bookstore
 
-> A website about books that shows a list of books from an API, also allows the user to add and deleted a select book. It was created with React, Redux, HTML5 and SASS.
+> A website about books that shows a list of books from an API, also allows the user to add and deleted a select book. It was created with React, Redux, HTML5 and CSS3.
 ## Built With
 
 - HTML5
-- SASS
+- CSS3
 - React
 - Redux
 - Axios
@@ -85,7 +85,7 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+- Usman Suleiman Babakolo, whose design was used in this project.
 
 ## 📝 License
 

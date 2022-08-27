@@ -1,0 +1,9 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+
+  /* overflow-y:auto;
+  height: 85%; */
+  width: 90%;
+}

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { v4 as uuidv4 } from 'uuid';
 import { AddBook } from '../redux/books/books';
+import styles from '../styles/AddBookFrm.module.css';
 
 const AddBookFrm = () => {
   // Hooks
@@ -25,20 +26,23 @@ const AddBookFrm = () => {
     e.target.reset();
   };
   return (
-    <div>
+    <div className={styles.AddBook}>
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={AddBookHandler}>
+      <form onSubmit={AddBookHandler} className={styles.Form}>
         <input
+          className={styles.Title}
           type="text"
           placeholder="Book title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
+          className={styles.Author}
           type="text"
           placeholder="Author"
           onChange={(e) => setAuthor(e.target.value)}
         />
         <select
+          className={styles.Category}
           defaultValue={selectCategory}
           onChange={(e) => setCategory(e.target.value)}
         >

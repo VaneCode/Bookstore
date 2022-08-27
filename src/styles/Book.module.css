@@ -1,0 +1,166 @@
+.BookContainer {
+  height: 10.625rem;
+  display: flex;
+  border: solid 0.1rem var(--dark-white);
+  padding: 1.5rem 2.5rem;
+  font-family: var(--second-font);
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.BookDetails {
+  min-height: 90%;
+  flex: 2;
+  background-color: var(--white-color);
+}
+
+.Category {
+  width: 4.313rem;
+  opacity: 0.5;
+  font-family: var(--main-font);
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: -0.5rem;
+}
+
+.Title {
+  width: 22.813rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  margin-top: 0;
+  margin-bottom: -0.5rem;
+}
+
+.Author {
+  width: 6.688rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--opaque-azure);
+  margin-bottom: 1.5rem;
+}
+
+.BookButtons {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--white-color);
+  padding: 0;
+}
+
+.BookButtons button {
+  width: 4.563rem;
+  height: 1.188rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--opaque-azure);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+}
+
+.BookButtons :nth-child(2) {
+  border-right: solid 0.1rem var(--dark-white);
+  border-left: solid 0.1rem var(--dark-white);
+}
+
+.ProgressPercentage {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white-color);
+}
+
+.ProgressDiv {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+
+.ProgressDiv #Circle {
+  width: 5rem;
+  height: 5rem;
+}
+
+.PercentCompleted {
+  width: 4.25rem;
+  height: 2.438rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.Completed {
+  width: 5rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.LineBook {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 1.125rem 3.688rem 0 4.938rem;
+  border: solid 1px var(--dark-white);
+}
+
+.UpdateProgress {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+
+.UpdateProgress span {
+  width: 7.875rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.UpdateProgress h2 {
+  width: 4.688rem;
+  height: 1.313rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.UpdateProgress button {
+  width: 11.5rem;
+  height: 2.063rem;
+  border: solid 0.1rem var(--azure);
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: var(--white-color);
+}

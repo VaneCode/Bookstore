@@ -1,0 +1,16 @@
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.Line {
+  width: 91%;
+  height: 0.125rem;
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  border: solid 1px var(--dark-white);
+}
