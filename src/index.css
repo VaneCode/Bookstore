@@ -5,6 +5,7 @@
 :root {
   --azure: #0290ff;
   --opaque-azure: #4386bf;
+  --dark-white: #e8e8e8;
   --white-color: #fff;
   --black-color: #121212; 
   --main-font: 'Montserrat', sans-serif;
@@ -26,4 +27,4 @@ body {
   box-sizing: inherit;
 }
 
-* { border: 1px solid black; }
+/** { border: 1px solid black; }*/

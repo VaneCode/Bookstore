@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux/es/exports';
 import { FetchedBooks } from '../redux/books/books';
 import Book from './Book';
+import styles from '../styles/BookList.module.css';
 
 const BookList = () => {
   // Get the list of books from the state
@@ -12,14 +13,11 @@ const BookList = () => {
     dispatch(FetchedBooks());
   }, []);
   return (
-    <div>
+    <div className={styles.List}>
       {booksList.map((book) => (
         <Book
           key={book.item_id}
-          id={book.item_id}
-          title={book.title}
-          author={book.author}
-          category={book.category}
+          book={book}
         />
       ))}
     </div>

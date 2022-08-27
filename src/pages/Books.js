@@ -1,8 +1,9 @@
 import AddBookFrm from '../components/AddBookFrm';
 import BookList from '../components/BookList';
+import styles from '../styles/MainSection.module.css';
 
 const Books = () => (
-  <div>
+  <div className={styles.MainContainer}>
     <BookList />
     <AddBookFrm />
   </div>

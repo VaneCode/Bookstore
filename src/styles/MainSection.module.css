@@ -1,0 +1,8 @@
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding-top: 2rem;
+    align-items: center;
+}
