@@ -9,51 +9,48 @@
 }
 
 .BookstoreCMS {
-    width: 15rem;
-    height: 2.313rem;
-    margin: 0.375rem 0 0.125rem 0;
-    font-family: var(--main-font);
-    font-size: 1.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--azure);
-    text-decoration: none;
-  }
-
-.navigation{
-    list-style: none;   
-    display: flex;
-    gap:1rem;
-    padding: 0;
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 0 0.125rem 0;
+  font-family: var(--main-font);
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+  text-decoration: none;
 }
 
-.navItem{
-    width: 3.688rem;
-    height: 1rem;
-    font-family: var(--main-font);
-    font-size: 0.813rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 1.9px;
-    color: var(--black-color);
-    text-decoration: none;
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
 }
 
-.UserIcon{
-    margin-left: auto;
-    width: 1.063rem;
-    height: 1.063rem;
+.navItem {
+  width: 3.688rem;
+  height: 1rem;
+  font-family: var(--main-font);
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-color);
+  text-decoration: none;
 }
 
-.UserIconImg{
-    width: 1.063rem;
-    height: 1.063rem;
+.UserIcon {
+  margin-left: auto;
+  width: 1.063rem;
+  height: 1.063rem;
 }
 
-
-
+.UserIconImg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
